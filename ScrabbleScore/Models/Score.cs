@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace ScrabbleScore.Models
@@ -41,9 +42,8 @@ namespace ScrabbleScore.Models
 
     public static int GetPointsForLetter(char letter)
     {
-      return _scores[letter];
+      return _scores[char.ToLower(letter)];
     }
-
     public static int CalculateScore(string word)
     {
       return 0;
