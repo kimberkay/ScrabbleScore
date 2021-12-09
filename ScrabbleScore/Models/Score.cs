@@ -46,7 +46,12 @@ namespace ScrabbleScore.Models
     }
     public static int CalculateScore(string word)
     {
-      return 0;
+      int score = 0;
+      for (int i = 0; i < word.Length; i++)
+      {
+        score += GetPointsForLetter(word[i]);
+      }
+      return score;
     }
   }
 }

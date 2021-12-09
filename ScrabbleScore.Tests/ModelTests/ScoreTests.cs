@@ -20,6 +20,10 @@ namespace ScrabbleScore.Tests
       Assert.AreEqual(10, Score.GetPointsForLetter('Z'));
     }
 
-
+    [TestMethod]
+    public void CalculateScore_ReturnsIntegerOfScore_Int()
+    {
+    Assert.AreEqual(8, Score.CalculateScore("word"));
+    }
   }
 }
